@@ -1,0 +1,16 @@
+
+{
+    "welcome": "¡Bienvenido a ViviendaView!",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "username": "Nombre de usuario",
+    "password": "Contraseña",
+    "invalidCredentials": "Usuario o contraseña inválidos",
+    "userNotRegistered": "Usuario no registrado o contraseña incorrecta",
+    "loginError": "error en el inicio de sesión",
+    "home":"inicio",
+    "delivery": "Correspondencias",
+    "visitors":"Visitas",
+    "vehicles":"Vehiculos"
+  }
+  

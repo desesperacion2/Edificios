@@ -1,0 +1,16 @@
+
+{
+    "welcome": "Welcome to ViviendaView!",
+    "login": "Login",
+    "logout": "Logout",
+    "username": "Username",
+    "password": "Password",
+    "invalidCredentials": "Invalid username or password",
+    "userNotRegistered": "user not registered or password incorrect",
+    "loginError": "Login error",
+    "home": "Home",
+    "delivery": "delivery",
+    "visitors":"Visitors",
+    "vehicles":"Vehicles"
+  }
+  
