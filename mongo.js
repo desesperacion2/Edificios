@@ -21,4 +21,16 @@ const newSchema=new mongoose.Schema({
 
 const collection = mongoose.model("users",newSchema)
 
-module.exports=collection
+
+
+
+const departmentSchema = new mongoose.Schema({
+    Number: {
+        type: String,
+        required: true
+    }
+});
+
+const Department = mongoose.model('departments', departmentSchema);
+
+module.exports = { collection, Department};
