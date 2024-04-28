@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <>
-      <Navbar bg="light" expand="lg" className="px-3">
+      <Navbar bg="warning" expand="lg" className="mx-3 my-3 rounded">
         <Container fluid>
           <Navbar.Brand href="/home">{t('welcome')}</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -21,7 +21,6 @@ function Home() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
     </>
   );
 }

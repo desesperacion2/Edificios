@@ -1,7 +1,9 @@
 
 {
-    "welcome": "Welcome to ViviendaView!",
+    "welcome": "Welcome to BuildingBuddy!",
     "login": "Login",
+    "login.username": "User",
+    "login.password": "Password",
     "logout": "Logout",
     "username": "Username",
     "password": "Password",
@@ -9,7 +11,7 @@
     "userNotRegistered": "user not registered or password incorrect",
     "loginError": "Login error",
     "home": "Home",
-    "delivery": "delivery",
+    "delivery": "Delivery",
     "visitors":"Visitors",
     "vehicles":"Vehicles"
   }
