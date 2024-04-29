@@ -13,6 +13,17 @@
     "home":"Inicio",
     "delivery": "Correspondencias",
     "visitors":"Visitas",
-    "vehicles":"Vehiculos"
+    "vehicles":"Vehiculos",
+    "visitRegister": "Registro de Visitas no Frecuentes",
+    "department": "Departamento",
+    "selectDepartment": "Seleccione un departamento",
+    "name": "Nombre",
+    "date": "Fecha",
+    "time": "Hora",
+    "registerVisit": "Registrar Visita",
+    "consoleDptoError": "Hubo un error al recuperar los departamentos:",
+    "recoveringDptoError": "Error al recuperar los departamentos",
+    "rightsReserved": "Todos los derechos reservados"
+    
   }
   
