@@ -1,5 +1,5 @@
 const express = require("express");
-const { collection, Department } = require("./mongo");
+const { collection, Department, Visit} = require("./mongo");
 const cors = require("cors");
 const bcrypt = require("bcrypt"); 
 const app = express();
@@ -34,15 +34,40 @@ app.post("/", async (req, res) => {
 app.get('/api/departments', async (req, res) => {
 
     try {
-      // Asegúrate de que 'Department' corresponda con tu modelo de Mongoose y 'Proyect' sea el nombre de tu base de datos.
       const departments = await Department.find(); // Este debería ser tu modelo de Mongoose
       res.json(departments);
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: 'Err al recuperar los departamentos' });
+      res.status(500).json({ message: 'Error al recuperar los departamentos' });
+    }
+});
+  
+
+
+
+  
+  // Ruta para manejar el envío de una nueva visita
+  app.post('/api/visitas', async (req, res) => {
+    try {
+      const newVisit = new Visit({
+        departamento: req.body.departamento,
+        nombre: req.body.nombre,
+        fecha: req.body.fecha,
+        hora: req.body.hora
+      });
+  
+      const savedVisit = await newVisit.save();
+      res.status(201).json(savedVisit);
+    } catch (error) {
+      console.error('Error al guardar la visita:', error);
+      res.status(500).json({ message: 'Error al registrar la visita' });
     }
   });
-  
+
+
+
+
+
 
 
 

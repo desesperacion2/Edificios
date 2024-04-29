@@ -11,11 +11,13 @@ function Visit() {
   const [message, setMessage] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/')
+    axios.get('http://localhost:8000/api/departments')
       .then(response => {
+        // Asegúrate de que cada objeto del departamento tiene una propiedad `Number`
         setDepartments(response.data);
       })
       .catch(error => {
+        // Manejo de error
         setMessage('Error al recuperar los departamentos');
         console.error('Hubo un error al recuperar los departamentos:', error);
       });
@@ -24,13 +26,20 @@ function Visit() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const visita = { departamento: selectedDepartment, nombre, fecha, hora };
-      await axios.post('http://localhost:8000/api/visitas', visita);
+      const visita = {
+        departamento: selectedDepartment,
+        nombre,
+        fecha,
+        hora
+      };
+      const response = await axios.post('http://localhost:8000/api/visitas', visita);
       setMessage('Visita registrada con éxito');
+      // Restablece el estado de tus campos de formulario aquí
       setSelectedDepartment('');
       setNombre('');
       setFecha('');
       setHora('');
+      console.log(response.data); // Para confirmar que la visita se ha guardado
     } catch (error) {
       setMessage('Error al registrar la visita');
       console.error('Error al enviar el formulario:', error);
@@ -45,14 +54,11 @@ function Visit() {
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="visitasForm.DepartmentSelect">
               <Form.Label>Departamento</Form.Label>
-              <Form.Control
-                as="select"
-                value={selectedDepartment}
-                onChange={e => setSelectedDepartment(e.target.value)}
-              >
+              <Form.Control as="select" value={selectedDepartment} onChange={e => setSelectedDepartment(e.target.value)}>
                 <option value="">Seleccione un departamento</option>
                 {departments.map((dept, index) => (
-                  <option key={index} value={dept._id}>{dept.departmentNumber}</option>
+                  // Asegúrate de que aquí estás accediendo a la propiedad correcta del objeto del departamento
+                  <option key={index} value={dept.Number}>{dept.Number}</option>
                 ))}
               </Form.Control>
             </Form.Group>

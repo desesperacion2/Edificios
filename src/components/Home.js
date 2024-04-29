@@ -23,7 +23,7 @@ function Home() {
             <Nav className="w-100 justify-content-evenly">
               <Nav.Link href="/Home" className="navbar-link">{t('home')}</Nav.Link>
               <Nav.Link href="/correspondencia" className="navbar-link">{t('delivery')}</Nav.Link>
-              <Nav.Link href="/visitas" className="navbar-link">{t('visitors')}</Nav.Link>
+              <Nav.Link href="/Visit" className="navbar-link">{t('visitors')}</Nav.Link>
               <Nav.Link href="/vehiculos" className="navbar-link">{t('vehicles')}</Nav.Link>
             </Nav>
           </Navbar.Collapse>

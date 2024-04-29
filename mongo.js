@@ -33,4 +33,21 @@ const departmentSchema = new mongoose.Schema({
 
 const Department = mongoose.model('departments', departmentSchema);
 
-module.exports = { collection, Department};
+
+
+const visitSchema = new mongoose.Schema({
+    departamento: String,
+    nombre: String,
+    fecha: Date,
+    hora: String
+
+});
+  
+const Visit = mongoose.model('Visit', visitSchema);
+
+
+
+
+
+
+module.exports = { collection, Department, Visit};
