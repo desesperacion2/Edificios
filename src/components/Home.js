@@ -7,6 +7,9 @@ import { Container } from 'react-bootstrap';
 function Home() {
   const { t } = useTranslation();
 
+  // DEBUG Log: para verificar que la traducción se obtiene correctamente
+  console.debug("Translation for Home component:", t('home'));
+
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <NavBar /> {/* Usa el componente Navbar */}
